@@ -9,22 +9,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
-                        <div class="page-title-right">
-                            <form class="d-flex align-items-center mb-3">
-                                <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control border" id="dash-daterange">
-                                    <span class="input-group-text bg-blue border-blue text-white">
-                                                    <i class="mdi mdi-calendar-range"></i>
-                                                </span>
-                                </div>
-                                <a href="javascript: void(0);" class="btn btn-blue btn-sm ms-2">
-                                    <i class="mdi mdi-autorenew"></i>
-                                </a>
-                                <a href="javascript: void(0);" class="btn btn-blue btn-sm ms-1">
-                                    <i class="mdi mdi-filter-variant"></i>
-                                </a>
-                            </form>
-                        </div>
+
                         <h4 class="page-title">Dashboard</h4>
                     </div>
                 </div>
@@ -539,4 +524,38 @@
         </div> <!-- container -->
 
     </div>
+    @push('scripts')
+        <script src="{{asset('jquery-3.7.0.min.js')}}"></script>
+
+        <!-- Sweet Alerts js -->
+        <script src="{{ asset('admin/assets/libs/sweetalert2/sweetalert2.all.min.js') }}"></script>
+
+        <!-- Sweet alert init js-->
+        <script src="{{ asset('admin/assets/js/pages/sweet-alerts.init.js') }}"></script>
+
+
+        <script type="text/javascript">
+
+            @if(Session::has('logedin'))
+            $(document).ready( function () {
+                // alert('test');
+
+                Swal.fire({
+
+                    timerProgressBar: true,
+                    position: "top-end",
+                    icon: "success",
+                    title: "You Login Successfully !",
+                    showConfirmButton: !1,
+                    timer: 1500,
+
+                });
+            });
+
+
+
+            @endif
+        </script>
+
+    @endpush
 @endsection

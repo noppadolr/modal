@@ -7,7 +7,7 @@ use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.adminLogin');
 });
 
 Route::get('/dashboard', function () {
@@ -20,17 +20,26 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
- Route::controller(StudentController::class)->group(function (){
-     Route::get('student','Student')->name('student');
 
- });
 
 require __DIR__.'/auth.php';
+Route::middleware('auth')->group(function () {
+        Route::controller(AdminController::class)->group(function (){
+            Route::get('admin/profile','AdminProfile')->name('admin.profile');
+            Route::get('admin/logout','AdminLogout')->name('admin.logout');
+            Route::post('admin/update/profile',"UpdateProfile")->name('admin.profile.update');
+            Route::get('admin/dashboard','AdminDashboard')->name('admin.dashboard');
+            Route::get('admin/change/password','ChangePassword')->name('change.password');
+            Route::post('update/password','UpdatePassword')->name('update.password');
+
+        });
+});
+
 Route::controller(AdminController::class)->group(function (){
-    Route::get('admin/profile','AdminProfile')->name('admin.profile');
-    Route::get('admin/logout','AdminLogout')->name('admin.logout');
-    Route::post('admin/update/profile',"UpdateProfile")->name('admin.profile.update');
-    Route::get('admin/dashboard','AdminDashboard')->name('admin.dashboard');
+
+    Route::get('admin/login/view','AdminLoginView');
+
+
 
 });
+

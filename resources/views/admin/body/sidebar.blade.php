@@ -7,13 +7,13 @@
     <!-- Brand Logo -->
     <div class="logo-box">
         <!-- Brand Logo Light -->
-        <a href="index.html" class="logo-light">
+        <a href="" class="logo-light">
             <img src="{{ asset('admin/assets/images/logo-light.png') }}" alt="logo" class="logo-lg">
             <img src="{{ asset('admin/assets/images/logo-sm.png') }}" alt="small logo" class="logo-sm">
         </a>
 
         <!-- Brand Logo Dark -->
-        <a href="index.html" class="logo-dark">
+        <a href="" class="logo-dark">
             <img src="{{ asset('admin/assets/images/logo-dark.png') }}" alt="dark logo" class="logo-lg">
             <img src="{{ asset('admin/assets/images/logo-sm.png') }}" alt="small logo" class="logo-sm">
         </a>
@@ -36,9 +36,9 @@
                     </a>
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <i class="fe-settings me-1"></i>
-                        <span>Settings</span>
+                    <a href="{{route('change.password')}}" class="dropdown-item notify-item">
+                        <i class="fe-settings "></i>
+                        <span> <small>Change Password</small> </span>
                     </a>
 
                     <!-- item-->
@@ -69,7 +69,7 @@
 
                     <span class="menu-icon"><i data-feather="airplay"></i></span>
                     <span class="menu-text"> Dashboards </span>
-                    <span class="badge bg-success rounded-pill ms-auto">4</span>
+
                 </a>
 {{--                <div class="collapse" id="menuDashboards">--}}
 {{--                    <ul class="sub-menu">--}}
@@ -100,14 +100,14 @@
             <li class="menu-title">Apps</li>
 
             <li class="menu-item">
-                <a href="apps-calendar.html" class="menu-link">
+                <a href="" class="menu-link">
                     <span class="menu-icon"><i data-feather="calendar"></i></span>
                     <span class="menu-text"> Calendar </span>
                 </a>
             </li>
 
             <li class="menu-item">
-                <a href="apps-chat.html" class="menu-link">
+                <a href="" class="menu-link">
                     <span class="menu-icon"><i data-feather="message-square"></i></span>
                     <span class="menu-text"> Chat </span>
                 </a>
@@ -122,27 +122,27 @@
                 <div class="collapse" id="menuEcommerce">
                     <ul class="sub-menu">
                         <li class="menu-item">
-                            <a href="ecommerce-dashboard.html" class="menu-link">
+                            <a href="" class="menu-link">
                                 <span class="menu-text">Dashboard</span>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="ecommerce-products.html" class="menu-link">
+                            <a href="" class="menu-link">
                                 <span class="menu-text">Products</span>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="ecommerce-product-detail.html" class="menu-link">
+                            <a href="" class="menu-link">
                                 <span class="menu-text">Product Detail</span>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="ecommerce-product-edit.html" class="menu-link">
+                            <a href="" class="menu-link">
                                 <span class="menu-text">Add Product</span>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="ecommerce-customers.html" class="menu-link">
+                            <a href="" class="menu-link">
                                 <span class="menu-text">Customers</span>
                             </a>
                         </li>
